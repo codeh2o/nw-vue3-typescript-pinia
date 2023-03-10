@@ -56,6 +56,12 @@ This project uses the following technologies:
 - [Vue 3](https://v3.vuejs.org/) - A progressive JavaScript framework for building user interfaces.
 - [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
 - [Pinia](https://pinia.esm.dev/) - A state management library for Vue.
+
+## Alternatives
+* [nw-vue3-boilerplate.](https://github.com/nwutils/nw-vue3-boilerplate) A fully featured boilerplate, complete with Vite, Vitest, & Pinia integration and automated builds for web and desktop. Comes with Vue DevTools built in.
+* [nw-vue-cli-example](https://github.com/nwutils/nw-vue-cli-example) - Uses Vue-CLI, has Vue 2 and Vue 3 branches.
+* [nwjs-vue](https://github.com/elegantweb/nwjs-vue) - Uses Vue-CLI 2
+* [vue-desktop-basic](https://github.com/TheJaredWilcurt/vue-desktop-basic) - Does not use a build system at all, all `.vue` files run directly in the browser context
 ## Contributing
 
 We welcome and appreciate your contributions! If you would like to contribute code, please follow these steps:
