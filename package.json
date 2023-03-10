@@ -1,0 +1,116 @@
+{
+  "name": "nw-vue3-typescript-pinia",
+  "version": "0.0.0",
+  "main": "http://localhost:4175",
+  "node-remote": "http://localhost:4175",
+  "node-main": "",
+  "window": {
+    "width": 960,
+    "height": 600,
+    "min_width": 700,
+    "min_height": 500,
+    "icon": "public/icon.png"
+  },
+  "private": true,
+  "scripts": {
+    "dev:web": "vite --port 4175",
+    "dev:desktop": "wait-on -c waitOnConfig.json http-get://localhost:4175 && nw .",
+    "dev": "concurrently npm:dev:web npm:dev:desktop",
+    "build": "npm run build:clean && npm run build:web && npm run build:nw",
+    "build:web": "vite build",
+    "build:clean": "rimraf ./dist-vue ./dist",
+    "build:nw": "build --concurrent --tasks win-x86,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
+    "build:win": "npm run build:win:clean && npm run build:web && build --tasks win-x86 --mirror https://dl.nwjs.io/ .",
+    "build:lin": "npm run build:lin:clean && npm run build:web && build --tasks linux-x64 --mirror https://dl.nwjs.io/ .",
+    "build:win:clean": "rimraf ./dist-vue ./dist/%npm_package_name%-%npm_package_version%-win-x86 ./dist/%npm_package_name%-%npm_package_version%-win-x86.zip ./dist/%npm_package_name%-%npm_package_version%-win-x86.7z ./dist/%npm_package_name%-%npm_package_version%-win-x86-Setup.exe",
+    "build:lin:clean": "rimraf ./dist-vue ./dist/%npm_package_name%-%npm_package_version%-linux-x64 ./dist/%npm_package_name%-%npm_package_version%-linux-x64.zip",
+    "run:win": "dist\\%npm_package_name%-%npm_package_version%-win-x86\\%npm_package_name%.exe",
+    "run:lin": "./dist/%npm_package_name%-%npm_package_version%-linux-x64/%npm_package_name%",
+    "preview:web": "vite preview",
+    "update:vue-devtools": "rimraf ./node_modules/nw-vue-devtools-prebuilt && npm install"
+  },
+  "dependencies": {
+    "nw": "0.73.0-sdk",
+    "express": "^4.18.2",
+    "pinia": "^2.0.33",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.6",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "concurrently": "^7.6.0",
+    "nw-vue-devtools-prebuilt": "0.0.10",
+    "nwjs-builder-phoenix": "^1.15.0",
+    "nwjs-types": "^1.0.0",
+    "rimraf": "^4.4.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vue-tsc": "^1.0.24",
+    "wait-on": "^7.0.1"
+  },
+  "chromium-args": "--enable-spell-checking --load-extension='./node_modules/nw-vue-devtools-prebuilt/extension'",
+  "build": {
+    "nwVersion": "v0.73.0",
+    "nwFlavor": "normal",
+    "targets": [
+      "zip",
+      "nsis7z"
+    ],
+    "files": [
+      "**/*"
+    ],
+    "excludes": [
+      "src/**/*",
+      "tests/**/*",
+      "public/**/*",
+      "dist-vue/**/*.js.map",
+      "dist-vue/**/*.css.map",
+      "dist-vue/**/*-legacy*",
+      ".editorconfig",
+      ".eslintignore",
+      ".eslintrc",
+      ".gitignore",
+      "CODE_OF_CONDUCT.md",
+      "index.html",
+      "jsconfig.json",
+      "package-lock.json",
+      "screenshot.png",
+      "vite.config.js",
+      "waitOnConfig.json"
+    ],
+    "strippedProperties": [
+      "ManifestComments",
+      "scripts",
+      "devDependencies",
+      "build"
+    ],
+    "overriddenProperties": {
+      "main": "http://localhost:4186",
+      "node-remote": "http://localhost:4186",
+      "node-main": "server.js",
+      "chromium-args": "--enable-spell-checking",
+      "window": {
+        "width": 960,
+        "height": 600,
+        "min_width": 700,
+        "min_height": 500,
+        "icon": "dist-vue/icon.png"
+      }
+    },
+    "win": {
+      "icon": "public/icon-256.ico"
+    },
+    "mac": {
+      "icon": "public/icon.icns"
+    },
+    "nsis": {
+      "icon": "public/icon-256.ico",
+      "unIcon": "public/icon.ico",
+      "languages": [
+        "English"
+      ],
+      "diffUpdaters": false,
+      "hashCalculation": true
+    }
+  }
+}
