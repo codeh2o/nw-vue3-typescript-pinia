@@ -6,5 +6,5 @@ import applyPrototypes from "./helpers/applyPrototypes";
 
 const app = createApp(App)
 applyPrototypes(app.config.globalProperties);
-app.mount('#app')
 app.use(createPinia());
+app.mount('#app')
