@@ -2,7 +2,7 @@
 NW-Vue3-Typescript-Pinia is an open-source project based on NW.js, Vue 3, Typescript, and Pinia, designed to help developers quickly build applications on the NW.js platform.
 This project is heavily derived by [nw-vue3-boilerplate.](https://github.com/nwutils/nw-vue3-boilerplate) 
 ## Installation
-1.First, make sure you have installed Node.js and npm.
+1. First, make sure you have installed Node.js and npm.
 2. Clone this repository:
 ```bash
 git clone git@github.com:codeh2o/nw-vue3-typescript-pinia.git
