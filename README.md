@@ -5,7 +5,7 @@ This project is heavily derived by [nw-vue3-boilerplate.](https://github.com/nwu
 1.First, make sure you have installed Node.js and npm.
 2. Clone this repository:
 ```bash
-git clone https://github.com/<your_username>/nw-vue3-typescript-pinia.git
+git clone git@github.com:codeh2o/nw-vue3-typescript-pinia.git
 ```
 
 3. Navigate to the project directory and install the dependencies:
