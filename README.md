@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # NW-Vue3-Typescript-Pinia
 NW-Vue3-Typescript-Pinia is an open-source project based on NW.js, Vue 3, Typescript, and Pinia, designed to help developers quickly build applications on the NW.js platform.
 
@@ -68,4 +70,4 @@ We will review your pull request and communicate with you promptly.
 
 
 ## License
-NW-Vue3-Typescript-Pinia is released under the MIT License. See the [License](https://chat.openai.com/chat/LICENSE) file for details.
+NW-Vue3-Typescript-Pinia is released under the MIT License. See the [License](https://opensource.org/licenses/MIT) file for details.
