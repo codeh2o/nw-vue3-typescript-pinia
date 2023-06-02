@@ -27,7 +27,8 @@
     "run:win": "dist\\%npm_package_name%-%npm_package_version%-win-x86\\%npm_package_name%.exe",
     "run:lin": "./dist/%npm_package_name%-%npm_package_version%-linux-x64/%npm_package_name%",
     "preview:web": "vite preview",
-    "update:vue-devtools": "rimraf ./node_modules/nw-vue-devtools-prebuilt && npm install"
+    "update:vue-devtools": "rimraf ./node_modules/nw-vue-devtools-prebuilt && npm install",
+    "test": "jest"
   },
   "dependencies": {
     "nw": "0.73.0-sdk",
@@ -36,13 +37,17 @@
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.2",
     "@types/node": "^18.14.6",
     "@vitejs/plugin-vue": "^4.0.0",
+    "babel-jest": "^29.5.0",
     "concurrently": "^7.6.0",
+    "jest": "^29.5.0",
     "nw-vue-devtools-prebuilt": "0.0.10",
     "nwjs-builder-phoenix": "^1.15.0",
     "nwjs-types": "^1.0.0",
     "rimraf": "^4.4.0",
+    "test-jest": "^1.0.1",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
     "vue-tsc": "^1.0.24",
