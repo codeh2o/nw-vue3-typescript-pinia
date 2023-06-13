@@ -31,7 +31,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "nw": "0.73.0-sdk",
+    "nw": "0.77.0-sdk",
     "express": "^4.18.2",
     "pinia": "^2.0.33",
     "vue": "^3.2.45"
@@ -55,7 +55,7 @@
   },
   "chromium-args": "--enable-spell-checking --load-extension='./node_modules/nw-vue-devtools-prebuilt/extension'",
   "build": {
-    "nwVersion": "v0.73.0",
+    "nwVersion": "v0.77.0",
     "nwFlavor": "normal",
     "targets": [
       "zip",
